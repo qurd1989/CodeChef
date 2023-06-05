@@ -1,0 +1,24 @@
+package begginerLevel;
+
+import java.util.Scanner;
+
+public class CountTheNoteBooks {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+
+        int t = sc.nextInt();
+
+        while(t-- > 0) {
+
+            int n = sc.nextInt();
+
+            int total = (1000 * n) /100;
+
+
+            System.out.println(total);
+        }
+    }
+}

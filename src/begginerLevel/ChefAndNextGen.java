@@ -2,7 +2,7 @@ package begginerLevel;
 
 import java.util.Scanner;
 
-public class ExpertSetter {
+public class ChefAndNextGen {
 
     public static void main(String[] args) {
 
@@ -12,18 +12,19 @@ public class ExpertSetter {
 
         while (t-- > 0) {
 
+            int a = sc.nextInt();
+            int b = sc.nextInt();
             int x = sc.nextInt();
             int y = sc.nextInt();
 
-            double total =  (double) x/y;
+            int powerForEachYear = a *b;
+            int heliumTotal = x * y;
 
+            if(powerForEachYear > heliumTotal) {
 
-            if (total >= 0.5) {
-                System.out.println("Yes");
-
-            }else
                 System.out.println("No");
-
+            }else
+                System.out.println("Yes");
         }
     }
 }
