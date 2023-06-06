@@ -6,28 +6,19 @@ import java.util.Scanner;
 public class ChefAndCandies {
     public static void main(String[] args) {
 
-
-        Scanner sc = new Scanner(System.in);
-
-
-        int t = sc.nextInt();
-        while (t-- > 0) {
-
-            // N i number of children
-            // X candies  chef has
-
-            int n = sc.nextInt();
-            int x = sc.nextInt();
-
-            int totalCandies = (n - x);
-
-            if (totalCandies % 4 != 0) {
-
-                System.out.println((n - x) / 4);
-            }else
-
-                System.out.println((n - x) / 4 +1);
-
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt();
+        while (t > 0) {
+            int a = s.nextInt();
+            int b = s.nextInt();
+            if ((a > b) && (a - b) % 4 == 0) {
+                System.out.println((a - b) / 4);
+            } else if ((a > b) && (a - b) % 4 != 0) {
+                System.out.println(((a - b) / 4) + 1);
+            } else {
+                System.out.println(0);
+            }
+            t--;
         }
     }
 }
