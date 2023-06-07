@@ -12,6 +12,8 @@ public class ProblemsInYourToDoList {
 
         while (t-- > 0) {
 
+            System.out.println();
+
             int p = sc.nextInt();
             int q = sc.nextInt();
 
