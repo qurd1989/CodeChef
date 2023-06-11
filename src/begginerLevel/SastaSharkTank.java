@@ -13,6 +13,16 @@ public class SastaSharkTank {
         int a = sc.nextInt();
         int b = sc.nextInt();
 
-         -
+         int valuationA = a * 10;
+         int valuationB = b * 20;
+
+         if (valuationA  > valuationB) {
+
+             System.out.println("First");
+
+         } else if (valuationA < valuationB) {
+             System.out.println("Second");
+         }else
+             System.out.println("Any");
     }
 }
