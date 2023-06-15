@@ -6,7 +6,7 @@ public class NegativeProduct {
 
     public static void main(String[] args) {
 
-        System.out.println(-1 +0);
+
         Scanner sc = new Scanner(System.in);
 
         int t  = sc.nextInt();
@@ -17,7 +17,10 @@ public class NegativeProduct {
             int b = sc.nextInt();
             int c = sc.nextInt();
 
-
+            if ((a * b) > 0 || (a * c) > 0 || (c * b) > 0) {
+                System.out.println("No");
+            }else
+                System.out.println("Yes");
         }
 
     }
