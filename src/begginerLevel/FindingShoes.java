@@ -16,7 +16,12 @@ public class FindingShoes {
             int n = sc.nextInt();
             int m = sc.nextInt();
 
+  if(n <= m) {
 
+      System.out.println(n);
+
+  }else
+      System.out.println((n * 2)- m);
         }
     }
 
