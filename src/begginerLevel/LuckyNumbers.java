@@ -16,7 +16,24 @@ public class LuckyNumbers {
 
             int x = sc.nextInt();
 
-            boolean flag = false;
+
+
+
+            int n = x % 10;
+
+            if (n == 7) {
+                count++;
+            }
+            x = x/10;
+
+
+            if (count > 0) {
+                System.out.println("Yes");
+            }else
+                System.out.println("No");
+
+
+           /* boolean flag = false;
 
             String seven_Numbers = String.valueOf(x);
 
@@ -32,7 +49,7 @@ public class LuckyNumbers {
             if (flag) {
                 System.out.println("Yes");
             }else
-                System.out.println("No");
+                System.out.println("No");*/
 
 
         }
