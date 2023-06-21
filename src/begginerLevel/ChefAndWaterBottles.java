@@ -1,5 +1,6 @@
 package begginerLevel;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ChefAndWaterBottles {
@@ -22,6 +23,7 @@ public class ChefAndWaterBottles {
                 System.out.println(k/x);
             }else
                 System.out.println(n);
+
 
 
         }
