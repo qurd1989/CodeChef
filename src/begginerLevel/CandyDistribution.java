@@ -14,7 +14,8 @@ public class CandyDistribution {
             int n = sc.nextInt(); // N is number of Candies
             int m = sc.nextInt(); // M is number of Friends candies should be distributed.
 
-            if (n % m== 0 && n % 2==0) {
+            int ans = n / m;
+            if (n % m ==0 && ans % 2 == 0) {
                 System.out.println("Yes");
 
             }else
