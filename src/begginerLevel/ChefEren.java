@@ -9,8 +9,7 @@ public class ChefEren {
         Scanner sc = new Scanner(System.in);
 
         int t = sc.nextInt();
-        int evenIndex = 0;
-        int oddIndex = 0;
+
 
         while (t-- > 0) {
 
@@ -20,7 +19,9 @@ public class ChefEren {
 
 
 
-            for (int i = 1; i < n; i++){
+            int evenIndex = 0;
+            int oddIndex = 0;
+            for (int i = 1; i <=n; i++){
 
                 if (i % 2== 0) {
                     evenIndex++;
