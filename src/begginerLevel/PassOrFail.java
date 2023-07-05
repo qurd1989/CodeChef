@@ -1,5 +1,6 @@
 package begginerLevel;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class PassOrFail {
@@ -12,8 +13,20 @@ public class PassOrFail {
 
         while (t-- > 0) {
 
-            int a = sc.nextInt();   //
-            int b = sc.nextInt();   //
+            int n = sc.nextInt();   //  N is number questions
+            int x = sc.nextInt();   //  X is Correct question
+            int p = sc.nextInt();   // Chef need to score  P marks to pass the exam
+
+
+            int  marksForCorrectQuestions = x * 3;
+            int marksForWrongQuestions = (n - x) * 1;
+
+            if (marksForCorrectQuestions - marksForWrongQuestions >= p) {
+
+                System.out.println("Pass");
+            }else
+                System.out.println("Fail");
+
 
         }
     }
