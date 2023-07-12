@@ -17,7 +17,20 @@ public class ChefAndRaces {
             int a = sc.nextInt();   //
             int b = sc.nextInt();   //
 
+            int count = 2;
 
+            if (x == a  || x == b) {
+
+                count--;
+
+            }
+            if (y == a || y == b)
+            {
+                count--;
+            }
+
+
+            System.out.println(count);
 
 
         }

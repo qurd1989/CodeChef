@@ -12,6 +12,7 @@ public class Nameless {
         int x = sc.nextInt();
 
         int max = (x > 10) ? 3*x : 4 * x;
+        System.out.println(max);
 
     }
 }
