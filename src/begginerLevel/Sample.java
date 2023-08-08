@@ -1,5 +1,6 @@
 package begginerLevel;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -34,6 +35,14 @@ public class Sample {
         Arrays.sort(arr);
         System.out.println(arr[0] + arr[1]);
         return arr[1] + arr[2];
+    }
+
+
+    // Find common elements in two given Arrays
+
+    public static int[] solve( int a[]){
+
+        return new int[0];
     }
 }
 
