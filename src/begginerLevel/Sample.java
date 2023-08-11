@@ -14,7 +14,10 @@ public class Sample {
 
         for (int i = 0; i < t; i++) {
 
-            int aliceScore = solve(sc);
+            String ans = solve1(sc);
+            System.out.println(ans);
+
+            /*int aliceScore = solve(sc);
             int bobScore = solve(sc);
 
             if (aliceScore > bobScore) {
@@ -23,7 +26,7 @@ public class Sample {
                 System.out.println("Bob");
             } else {
                 System.out.println("Tie");
-            }
+            }*/
         }
     }
     public static int solve(Scanner sc){
@@ -44,5 +47,22 @@ public class Sample {
 
         return new int[0];
     }
+
+    public static String solve1(Scanner sc){
+        String first = sc.next();
+        String second = sc.next();
+
+        StringBuilder sb = new StringBuilder();
+
+        for (int k = 0; k < first.length(); k++) {
+
+            if (first.charAt(k) == second.charAt(k)){
+                sb.append("G");
+            }else
+                sb.append("B");
+        }
+        return sb.toString();
+    }
+
 }
 
