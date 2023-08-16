@@ -14,8 +14,15 @@ public class Sample {
 
         for (int i = 0; i < t; i++) {
 
-            String ans = solve1(sc);
-            System.out.println(ans);
+            String n = sc.next();
+            int ans[] = solve4(n);
+
+            for (int nums: ans) {
+                System.out.print(nums + " ");
+            }
+
+           /* String ans = solve1(sc);
+            System.out.println(ans);*/
 
             /*int aliceScore = solve(sc);
             int bobScore = solve(sc);
@@ -62,6 +69,20 @@ public class Sample {
                 sb.append("B");
         }
         return sb.toString();
+    }
+
+    public static int[] solve4(String str) {
+
+        int n = str.length();
+        int digitsum[] = new int[n];
+
+        for (int i = 0; i < str.length(); i++) {
+
+            digitsum[i] = (str.charAt(i) -'0');
+
+
+        }
+        return digitsum;
     }
 
 }
