@@ -13,17 +13,13 @@ public class Coldplay {
 
         for (int i=0; i < t; i++) {
 
-            int n = sc.nextInt();
-            int ccount = 0;
-            int x = n;
-            for (int k = 0; k < x; k++) {
+            int m = sc.nextInt();
+            int s = sc.nextInt();
 
-
-                x = x / 10;
-                ccount++;
-
-            }
-            System.out.println(ccount);
+            if (m < s) {
+                System.out.println(0);
+            }else
+                System.out.println(m / s);
         }
     }
 }
