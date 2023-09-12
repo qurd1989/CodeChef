@@ -1,5 +1,6 @@
 package begginerLevel;
 
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -8,19 +9,17 @@ public class PassingMarks {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
 
-        int t = sc.nextInt();
-        for (int i = 0; i < t; i++)
-        {
-            int n = sc.nextInt();
-            int x = sc.nextInt();
-
-            int arr[] = new int[n];
-            for (int k = 0;  k < arr.length; k++){
-
-                arr[k] = sc.nextInt();
-
+        for(int i = 1; i<=T; i++){
+            int N = sc.nextInt();
+            int X = sc.nextInt();
+            int A[] = new int[N];
+            for(int j = 0; j<N; j++){
+                A[j] = sc.nextInt();
             }
+            Arrays.sort(A);
+            System.out.println(A[N - X] -1);
         }
     }
 }
