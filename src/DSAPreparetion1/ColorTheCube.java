@@ -1,4 +1,4 @@
-package begginerLevel;
+package DSAPreparetion1;
 
 import java.util.Scanner;
 
