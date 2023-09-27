@@ -13,10 +13,23 @@ class Node {
     class ReverseTheLinkedList {
         public static void main(String[] args) {
 
-            Node head = new Node(2)
-            Node temp = new Node(7);
+        }
+        public static  Node solve(Node head) {
 
-            temp.next = head
+            int count = 0;
+            Node middlle = head;
+            while (head !=  null) {
+                count += 1;
+                head = head.next;
+            }
+            int i = 0;
+            while (i < count /2) {
+                middlle = middlle.next;
+                i++;
+
+            }
+            return middlle;
+
 
         }
     }
