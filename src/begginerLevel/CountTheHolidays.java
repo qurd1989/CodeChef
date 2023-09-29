@@ -23,7 +23,7 @@ public class CountTheHolidays {
             int count = 0;
             for (int k = 0; k < n; k++) {
                 int day = read.nextInt();
-                if (set.contains(day)) {
+                if (!set.contains(day)) {
                     count++;
                 }
             }
