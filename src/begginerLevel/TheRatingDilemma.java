@@ -12,4 +12,5 @@ public class TheRatingDilemma {
             System.out.println((n+1)*(-1));
         }
     }
+
 }
