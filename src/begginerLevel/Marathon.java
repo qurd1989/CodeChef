@@ -14,7 +14,7 @@ public class Marathon {
             int marathonTwo = sc.nextInt();
             int marathonThree = sc.nextInt();
 
-            int totalKilometer = dDays * dKilometer;
+             int totalKilometer = dDays * dKilometer;
 
             if (totalKilometer >= 42) {
                 System.out.println(marathonThree);
