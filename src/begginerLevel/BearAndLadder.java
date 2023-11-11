@@ -10,6 +10,7 @@ public class BearAndLadder {
             int a = sc.nextInt();
             int b = sc.nextInt();
 
+
         }
     }
 }
