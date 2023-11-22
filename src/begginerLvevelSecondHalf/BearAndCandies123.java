@@ -17,7 +17,7 @@ public class BearAndCandies123 {
                     ans = "Bob";
                     break;
                 }
-                if ((i * i) +1 > b) {
+                if (i * (i +1) > b) {
                     ans = "Limak";
                     break;
                 }
