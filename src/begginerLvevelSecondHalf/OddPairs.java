@@ -13,4 +13,22 @@ public class OddPairs {
             System.out.println((n*n)/2);
         }
     }
+    public boolean checkPerfectNumber(int num) {
+        int sum = 0;
+        int num1 = (int)Math.sqrt(num);
+
+        for(int i = 2;  i<= num1; i++){
+            if(num % i ==0){
+                if(num/i != i){
+                    sum += i;
+                    sum += num/i;
+                }else{
+                    sum +=i;
+                }
+            }
+
+        }
+        return sum == num;
+    }
 }
+
