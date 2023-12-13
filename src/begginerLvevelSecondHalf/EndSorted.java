@@ -1,5 +1,6 @@
 package begginerLvevelSecondHalf;
 
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -24,6 +25,7 @@ public class EndSorted {
                 if(p1 > p2)
                     --moves;
 
+                Arrays.sort(nums);
                 System.out.println(moves);
             }
         }
