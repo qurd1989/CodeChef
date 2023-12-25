@@ -19,5 +19,6 @@ public class PeakFinding {
             }
             System.out.println(max);
         }
+
     }
 }
