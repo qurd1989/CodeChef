@@ -11,9 +11,9 @@ public class FriendsMeetup {
             int x1 = sc.nextInt();
             int x2 = sc.nextInt();
 
-            if (x1 == x2 || x1 > x2){{
+            if (x1 == x2 || x1 > x2){
                 System.out.println("YES");
-            }}else
+            }else
                 System.out.println("NO");
 
         }
