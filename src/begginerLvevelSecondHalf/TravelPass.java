@@ -1,28 +1,28 @@
 package begginerLvevelSecondHalf;
 
+import java.util.Scanner;
+
 public class TravelPass {
     public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        while(t--> 0){
+            int n = sc.nextInt();
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            String s = sc.next();
+            int zeroCounts = 0;
+            int oneCounts = 0;
 
-        int n = 15;
-        System.out.println(sumOfPrimes(n));
-    }
-    public static int sumOfPrimes(int n) {
-        int sum = 0;
+            for (int i = 0; i < n; i++){
+                if (s.charAt(i) == '1'){
+                    oneCounts++;
+                }else
+                    zeroCounts++;
+            }
 
-        for (int i = 2; i <= n; i++){
-            if (isPrime(i)){
-                sum += i;
-            }
+            System.out.println((a * zeroCounts) + (b * oneCounts));
         }
-        return sum;
-    }
-    public static  boolean isPrime(int n){
-        for (int i = 2; i<=Math.sqrt(n); i++){
-            if (n % i== 0){
-                return false;
-            }
-        }
-        return true;
     }
 }
