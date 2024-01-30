@@ -15,6 +15,7 @@ public class ChefAndSocks {
              System.out.println("Lucky Chef");
          }else
              System.out.println("Unlucky Chef");
+        System.out.println();
 
     }
 }
