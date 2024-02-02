@@ -10,15 +10,15 @@ public class ChefAndString {
             String s = sc.next();
 
             int pairs = 0;
-            boolean flag = false;
-            for (int i = 0; i < s.length()-1; i++) {
-                if (s.charAt(i) != s.charAt(i + 1)) {
-                    if (!flag) {
-                        pairs++;
-                        flag = true;
-                    }
-                } else
+            boolean flag = true;
+            for (int i = 1; i < s.length(); i++) {
+                if (s.charAt(i) != s.charAt(i - 1) && flag) {
+
+                    pairs++;
                     flag = false;
+
+                } else
+                    flag = true;
             }
 
             System.out.println(pairs);
