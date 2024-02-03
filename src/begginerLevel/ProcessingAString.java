@@ -7,16 +7,33 @@ public class ProcessingAString {
 
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
-        while(t--> 0){
+        while (t-- > 0) {
             String s = sc.next();
-            int digitSum = 0;
-            for (int i = 0; i < s.length(); i++){
-                if (Character.isDigit(s.charAt(i))){
-
-                    digitSum += Character.getNumericValue(s.charAt(i));
-                }
-            }
-            System.out.println(digitSum);
+            System.out.println(isDigit2(s));
         }
+    }
+//    public static int isDigit(String s) {
+//        int digitSum = 0;
+//        for (int i = 0; i < s.length(); i++){
+//            if (Character.isDigit(s.charAt(i))){
+//
+//                digitSum += Character.getNumericValue(s.charAt(i));
+//            }
+//        }
+//        return digitSum;
+//
+//    }
+
+    public static int isDigit2(String s) {
+        int digitSum = 0;
+        for (int i = 0; i < s.length(); i++){
+            char ch = s.charAt(i);
+            if (ch >= '0' && ch <= '9');{
+                int digit = ch - '0';
+                digitSum += digit;
+            }
+        }
+        return digitSum;
+
     }
 }
