@@ -8,11 +8,12 @@ public class SignMoves {
         int t = sc.nextInt();
         while (t-- > 0) {
             int n = sc.nextInt();
-            int ans = n / 2;  // Correct calculation for even numbers
+            int ans = n / 2;
             if (n % 2 == 1) {  // Check for odd numbers
-                ans = -(n + 1) / 2;  // Correct calculation for odd numbers
+                ans = -(n + 1) / 2;
             }
             System.out.println(ans);
         }
     }
 }
+
