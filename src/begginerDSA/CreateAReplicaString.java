@@ -1,5 +1,6 @@
 package begginerDSA;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class CreateAReplicaString {
@@ -21,4 +22,10 @@ public class CreateAReplicaString {
         }
     }
 
+    public int[] prevSmaller(int[] A) {
+
+        for (int i = 0; i < A.length; i++){
+
+        }
+    }
 }
