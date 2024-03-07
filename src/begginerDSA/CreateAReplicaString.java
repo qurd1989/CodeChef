@@ -21,11 +21,4 @@ public class CreateAReplicaString {
             System.out.println(b);
         }
     }
-
-    public int[] prevSmaller(int[] A) {
-
-        for (int i = 0; i < A.length; i++){
-
-        }
-    }
 }
