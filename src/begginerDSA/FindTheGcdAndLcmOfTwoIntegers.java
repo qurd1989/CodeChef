@@ -3,6 +3,7 @@ package begginerDSA;
 import java.util.Scanner;
 
 public class FindTheGcdAndLcmOfTwoIntegers {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
@@ -12,7 +13,9 @@ public class FindTheGcdAndLcmOfTwoIntegers {
 
             int gcd = (a * b) /gcd(b,a);
             System.out.println(gcd(b, a)+ " " + gcd);
+
         }
+
     }
     public static int gcd(int b, int a){
         if (b == 0){
