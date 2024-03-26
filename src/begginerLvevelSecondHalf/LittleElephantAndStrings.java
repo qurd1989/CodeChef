@@ -11,7 +11,7 @@ public class LittleElephantAndStrings {
         for (int i = 0; i < n; i++) {
             s[i] = sc.next();
         }
-        for (int i = 0; i < k; i++){
+        while (k--> 0){
             String subString = sc.next();
             int flag = 0;
             if (subString.length() >= 47) {
