@@ -7,8 +7,29 @@ public class HostelRoom {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        int m = n;
+        int t = sc.nextInt();
+        while (t-- > 0) {
+            int n = sc.nextInt();
+            int x = sc.nextInt();
+            int events[] = new int[n];
+            for (int i = 0; i < n; i++){
+                events[i] = sc.nextInt();
+            }
+            int max_peopleInRoom = x;
+            int sum = x;
+            for (int i = 0; i < n; i++){
+                sum = events[i] + sum;
+                if (sum >= max_peopleInRoom){
+                    max_peopleInRoom = sum;
+                }else if (sum < 0){
+                    sum = x;
+                }
+            }
+            System.out.println(max_peopleInRoom);
+        }
+    }
+
+    public static void adjcentEdge(Scanner sc, int n){
 
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>(n);
 
