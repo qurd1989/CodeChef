@@ -40,4 +40,5 @@ public class DominantElement {
                 System.out.println("Yes");
         }
     }
+
 }
