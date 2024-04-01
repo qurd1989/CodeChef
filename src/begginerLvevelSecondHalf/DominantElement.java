@@ -1,9 +1,6 @@
 package begginerLvevelSecondHalf;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class DominantElement {
     public static void main(String[] args) {
@@ -40,5 +37,19 @@ public class DominantElement {
                 System.out.println("Yes");
         }
     }
+    public static void isDominantElement(int element[]){
+        int n = element.length;
+        int a[] = new int[n];
+        for (int i = 0; i < n; i++){
+            element[a[i]]++;
+            System.out.println(element[a[i]]);
+        }
+        Arrays.sort(element);
+        if (element[n-1] != element[n-2]){
+            System.out.println("Yes");
+        }else
+            System.out.println("No");
+    }
+
 
 }
