@@ -24,6 +24,7 @@ public class HostelRoom {
                     max = prefix[i];
                 }else if (prefix[i] < 0){
                     max = x;
+
                 }
                 System.out.println(max);
             }
