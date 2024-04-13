@@ -15,12 +15,13 @@ public class ChefAndGroups {
             while (i< n) {
                 if (s.charAt(i) == '0'){
                     i++;
-                }else
+                }else {
                     count++;
                     i++;
-                    while (i < n && s.charAt(i) == '1'){
+                    while (i < n && s.charAt(i) == '1') {
                         i++;
                     }
+                }
             }
             System.out.println(count);
         }
