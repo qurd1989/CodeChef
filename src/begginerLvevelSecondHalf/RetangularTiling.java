@@ -13,14 +13,11 @@ public class RetangularTiling {
                 System.out.println("Yes");
             }else
                 System.out.println("No");
-
-
-            String text = sc.next();
-            String pattern = sc.next();
-            System.out.println(hasSubstring(text, pattern));
+//            String text = sc.next();
+//            String pattern = sc.next();
+//            System.out.println(hasSubstring(text, pattern));
         }
     }
-
     public static boolean hasSubstring(String text, String pattern){
         int i = 0;
         int j = 0;
@@ -40,5 +37,4 @@ public class RetangularTiling {
         }
         return false;
     }
-
 }
