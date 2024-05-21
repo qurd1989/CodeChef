@@ -13,18 +13,12 @@ public class BrokenTelephone {
             for (int i = 0; i < n; i++){
                 result[i] = sc.nextInt();
             }
-            for (int i = 1; i  < n; i++){
-                if (i > 1) {
-                    if (result[i] != result[i - 1]) {
-                        count++;
-                        continue;
-                    }
+
+            for (int i = 0; i < n; i++) {
+                if ((i > 0 && result[i] != result[i - 1]) || (i < n - 1 && result[i] != result[i + 1])) {
+                    count++;
                 }
-                if ( i < n){
-                    if (result[i] != result[i+1]){
-                        count++;
-                    }
-                }
+
             }
             System.out.println(count);
         }
