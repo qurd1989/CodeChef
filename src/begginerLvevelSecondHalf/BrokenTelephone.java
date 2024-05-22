@@ -15,7 +15,8 @@ public class BrokenTelephone {
             }
 
             for (int i = 0; i < n; i++) {
-                if ((i > 0 && result[i] != result[i - 1]) || (i < n - 1 && result[i] != result[i + 1])) {
+                if ((i > 0 && result[i] != result[i - 1]) ||
+                        (i < n - 1 && result[i] != result[i + 1])) {
                     count++;
                 }
 
