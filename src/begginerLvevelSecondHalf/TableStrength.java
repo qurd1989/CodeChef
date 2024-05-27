@@ -21,6 +21,12 @@ public class TableStrength {
                 arr[i] = arr[n - i - 1];
                 arr[n - i - 1] = temp;
             }
+
+            for (int i = 0; i < n; i++){
+                int temp = arr[i];
+                arr[i] = arr[n-1];
+                arr[n-1] = temp;
+            }
             for (int i = 0; i < n; i++){
                 ans = Math.max(ans, arr[i] *(i+1));
             }
