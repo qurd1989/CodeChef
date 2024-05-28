@@ -8,22 +8,26 @@ public class TransfusionChain {
         int t = sc.nextInt();
         while (t-- > 0) {
             int n = sc.nextInt();
-            int a = 0, b = 0, ab = 0, o = 0;
-            for (int i = 0; i < n; i++) {
-                String s = sc.next();
-                if (s.equals("A")) {
-                    a++;
-                } else if (s.equals("B")) {
-                    b++;
-                } else if (s.equals("O")) {
-                    o++;
-                } else {
-                    ab++;
+            int countA = 0, countB = 0, countAB = 0, countO = 0;
+            for (int i = 0; i < n; i++){
+                String bloodType = sc.next();
+                switch (bloodType){
+                    case "A":
+                        countA++;
+                        break;
+                    case "B":
+                        countB++;
+                        break;
+                    case "AB":
+                        countAB++;
+                        break;
+                    case "O":
+                        countO++;
+                        break;
                 }
             }
-                int max = Math.max(a, b);
-                max += ab + o;
-                System.out.println(max);
+            int maxChain = countAB + countO + Math.max(countA, countB);
+            System.out.println(maxChain);
 
 //            for (int i =0 ; i < n; i++){
 //                arr[i] = sc.nextInt();
