@@ -1,5 +1,7 @@
 package begginerLvevelSecondHalf;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class JumpingInTheHills {
@@ -14,6 +16,7 @@ public class JumpingInTheHills {
             for(int i=0;i<n;i++){
                 arr[i] = in.nextInt();
             }
+            List<Integer> list = new ArrayList<>();
             boolean para = true;
             int index = 1;
             for(int i=1;i<n;i++){
