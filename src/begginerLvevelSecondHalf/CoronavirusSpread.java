@@ -27,6 +27,7 @@ public class CoronavirusSpread {
             max = Math.max(max, count);
             min = Math.min(min, count);
             System.out.println(min + " " + max);
+            System.out.println("Sen");
         }
     }
 }
