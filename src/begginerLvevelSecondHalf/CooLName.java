@@ -1,5 +1,6 @@
 package begginerLvevelSecondHalf;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class CooLName {
@@ -7,12 +8,14 @@ public class CooLName {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         while (t-- > 0) {
-            int n = sc.nextInt();
-            int arr[] = new int[n];
-            for (int i = 0; i < n; i++) {
-                arr[i] = sc.nextInt();
+            String s = sc.next();
+            int sum = 0;
+            char c[] = s.toCharArray();
+            Arrays.sort(c);
+            for (int i = 0; i < s.length(); i++){
+                sum = (i + 1) * (c[i] - 96);
             }
-            System.out.println(prefixWithOptimizedCode(arr));
+            System.out.println(sum);
         }
     }
 
@@ -78,7 +81,17 @@ public class CooLName {
     }
     public int solve(int[] A, int B) {
         int n = A.length;
-
-
+        int count = 0;
+        for (int i = 0; i < n; i++){
+            int sum = 0;
+            for (int j = i; j < n; j++){
+                sum += A[i];
+                int length = j - i+1;
+                if ((length % 2 == 0 && B > length) ||(length % 2 != 0 && B < length)){
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 }
