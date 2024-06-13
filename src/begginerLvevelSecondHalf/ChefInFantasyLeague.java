@@ -17,7 +17,6 @@ public class ChefInFantasyLeague {
             for (int i = 0; i < n; i++) {
                 type[i] = sc.nextInt();
             }
-
             int minDefender = Integer.MAX_VALUE;
             int minForward = Integer.MAX_VALUE;
             boolean flag = false;
