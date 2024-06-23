@@ -9,11 +9,12 @@ public class TwoTrains {
         while(t--> 0){
             int n = sc.nextInt();
             int sp = 0, sm = 0;
-            while (n-->0){
+            for (int i = 0; i < n-1; i++){
                 int c = sc.nextInt();
+                sp += c;
                 sm = Math.max(sm, c);
             }
-            System.out.println(sp + sp);
+            System.out.println(sp + sm);
         }
     }
     public static int[] generateFibonacciNumbers(int n) {
