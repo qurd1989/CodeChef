@@ -35,4 +35,25 @@ public class TrickORTreat {
             System.out.println(validCombination);
         }
     }
+    public static int minimumDistance(String[] arr, String book1, String book2) {
+        int n = arr.length;
+        int minDistance  = Integer.MAX_VALUE;
+        int post1 = 0, post2 = 0;
+        for (int i = 0; i < n; i++){
+            if (arr[i].equals(book1)){
+                post1 = i;
+                if (post2 != 0){
+                    minDistance = Math.min(minDistance, Math.abs(post1- post2));
+                }
+            }else if (arr[i].equals(book2)){
+                post2 = i;
+                if (post1 != 0){
+                    minDistance = Math.min(minDistance, Math.abs(post1 - post2));
+                }
+            }
+        }
+        return minDistance;
+    }
 }
+
+
