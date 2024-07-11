@@ -1,6 +1,6 @@
 package begginerLvevelSecondHalf;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class JustLikeMob {
     public static void main(String[] args) {
@@ -19,5 +19,20 @@ public class JustLikeMob {
                 System.out.println("YES");
             }
         }
+    }
+    public static List<int[]> pairSum(int [] arr, int s){
+        List<int[]> pairs = new ArrayList<>();
+        Set<Integer> set = new HashSet<>();
+        Arrays.sort(arr);
+        for (int i = 0; i < arr.length; i++) {
+            int complement = s - i;
+            if (set.contains(complement)) {
+                int[] pair = {i, complement};
+                Arrays.sort(pair);
+                pairs.add(pair);
+            }
+            set.add(i);
+        }
+        return pairs;
     }
 }
