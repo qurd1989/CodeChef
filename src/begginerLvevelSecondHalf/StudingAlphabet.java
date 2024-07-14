@@ -18,7 +18,11 @@ public class StudingAlphabet {
 
         }
     }
-
+    /*
+    *Providing 3 different approaches HashMapm, Set, Array
+    * Each approach  is much easier to understand. try  to read the code by
+    * yourself to understand them.
+    * Thanks*/
     private static boolean setSolution(String s, String w) {
         boolean flag = true;
         for (int i = 0; i < s.length(); i++) {
