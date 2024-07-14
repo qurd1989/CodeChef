@@ -8,25 +8,62 @@ public class StudingAlphabet {
         String s = sc.next();
         int n = sc.nextInt();
         String word;
-        for (int i = 0; i < n; i++){
+        boolean flag = true;
+        for (int i = 0; i < n; i++) {
             word = sc.next();
-            boolean flag = true;
-            Set<Character> map = new HashSet<>();
-            for (char ch : s.toCharArray()) {
-               map.add(ch);
-            }
-                for (char c : word.toCharArray()){
-                    if (!map.contains(c)){
-                        flag = false;
-                        break;
-                    }
-                }
-
-                if (flag){
-                    System.out.println("Yes");
-                }else
-                    System.out.println("No");
+            if (arraySolution(s, word)) {
+                System.out.println("Yes");
+            } else
+                System.out.println("No");
 
         }
     }
+
+    private static boolean setSolution(String s, String w) {
+        boolean flag = true;
+        for (int i = 0; i < s.length(); i++) {
+            Set<Character> set = new HashSet<>();
+            for (char ch : s.toCharArray()) {
+                set.add(ch);
+            }
+            for (char c : w.toCharArray()) {
+                if (!set.contains(c)) {
+                    flag = false;
+                    return flag;
+                }
+            }
+        }
+        return flag;
+    }
+    private static boolean mapSolution(String s, String w) {
+        boolean flag = true;
+        for (int i = 0; i < s.length(); i++) {
+            Map<Character, Integer> map = new HashMap<>();
+            for (char ch : s.toCharArray()) {
+                map.put(ch, 1);
+            }
+            for (char c : w.toCharArray()) {
+                if (!map.containsKey(c)) {
+                    flag = false;
+                    return flag;
+                }
+            }
+        }
+        return flag;
+    }
+    private static boolean arraySolution(String s, String w) {
+        boolean knownLetters [] = new boolean[26];
+        for (char ch : s.toCharArray()){
+            knownLetters[ch - 'a'] = true;
+        }
+        boolean flag = true;
+        for (char ch : w.toCharArray()){
+            if (!knownLetters[ch -'a']){
+                flag = false;
+                return flag;
+            }
+        }
+        return true;
+    }
 }
+
