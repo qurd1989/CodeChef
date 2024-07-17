@@ -15,6 +15,7 @@ public class ChefAndTheWildCard {
                 System.out.println("No");
                 break;
             }
+
             for (int i = 0; i < s.length(); i++) {
                 if (s.charAt(i) == s1.charAt(i) || s.charAt(i) == '?' || s1.charAt(i) == '?') {
                     count++;
