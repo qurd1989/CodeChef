@@ -15,6 +15,15 @@ public class LargestAndSecondLargest {
             for (int i = 0; i < n; i++){
                 arr[i] = sc.nextInt();
             }
+            for (int i = 0; i < n; i++){
+                if (arr[i] > largest){
+                    secondLargest = largest;
+                    largest = arr[i];
+                }else if(secondLargest < arr[i] && arr[i] < largest){
+                    secondLargest = arr[i];
+                }
+            }
+            System.out.println(largest+secondLargest);
         }
 
     }
