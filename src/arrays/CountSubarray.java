@@ -3,8 +3,21 @@ package arrays;
 import java.util.Scanner;
 
 public class CountSubarray {
-    public static int countSubarrays(int[] arr, int N, int K) {
-        // Write your code here
+        public static int countSubarrays(int[] arr, int n, int k) {
+            int count = 0;
+            for(int i = 0; i < n; i++){
+                int max = arr[i];
+                for(int j = i; j < n; j++){
+                    max = Math.max(max, arr[j]);
+                    if (max == k){
+                        count++;
+                    } else if(max > k){
+                        break;
+                    }
+                }
+            }
+            return count;
+        }
     }
 
     public static void main(String[] args) {
