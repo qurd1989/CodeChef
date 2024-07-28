@@ -1,10 +1,10 @@
 package arrays;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class Workers {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         int[] c = new int[n];
@@ -13,12 +13,39 @@ public class Workers {
         for (int i = 0; i < n; i++) {
             c[i] = scanner.nextInt();
         }
-
         for (int i = 0; i < n; i++) {
             t[i] = scanner.nextInt();
         }
-
+        int result = getResult(n, t, c);
+        System.out.println(result);
     }
+
+    private static int getResult(int n, int[] t, int[] c) {
+        int minTranslator = Integer.MAX_VALUE;
+        int minAuthor = Integer.MAX_VALUE;
+        int minBoth = Integer.MAX_VALUE;
+        for (int i = 0; i < n; i++) {
+            if (t[i] == 1) {
+                minTranslator = Math.min(minTranslator, c[i]);
+            } else if (t[i] == 2) {
+                minAuthor = Math.min(minAuthor, c[i]);
+            } else {
+                minBoth = Math.min(minBoth, c[i]);
+            }
+        }
+
+        System.out.println(minTranslator + " Min TRanslator");
+        System.out.println(minAuthor + " Min Author");
+        System.out.println(minBoth+ " Min Both");
+        int result = minTranslator + minAuthor;
+
+        System.out.println(result + " Result");
+        if (result < minBoth && result > 0) {
+            return result;
+        }else
+            return minBoth;
+    }
+
     public static String reverseString(String s){
         if (s.length() == 0){
             return "";
