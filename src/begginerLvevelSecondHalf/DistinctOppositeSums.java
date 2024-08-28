@@ -8,17 +8,18 @@ public class DistinctOppositeSums {
         int t = sc.nextInt();
         while (t-- > 0) {
             int n = sc.nextInt();
-            String s =sc.next();
-            int count = 0;
-            for (int i = 0; i < n; i++) {
-                if (s.charAt(i) == '@'){
-                    count++;
-                }
-                if (i < s.length()-1&& s.charAt(i) == '*' && s.charAt(i+1) == '*'){
-                    break;
-                }
+            int arr[] = new int[n];
+            for (int i = 0; i < n / 2; i++) {
+                arr[i] = i + 1;
             }
-            System.out.println(count);
+            for (int i = n / 2; i < n; i++) {
+                arr[i] = n - (i - n/2);
+            }
+            for (int i = 0; i < n; i++) {
+                System.out.print(arr[i] + " ");
+            }
+            System.out.println();
         }
+
     }
 }
