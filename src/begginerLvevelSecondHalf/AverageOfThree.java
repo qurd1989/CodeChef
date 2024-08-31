@@ -8,11 +8,7 @@ public class AverageOfThree {
         int t = sc.nextInt();
         while(t--> 0){
             int N = sc.nextInt();
-
-            for(int i=0; i<N-1; i++){
-                System.out.print((i+2)+" ");
-            }
-            System.out.println(1);
+            System.out.println(( N -1 + " " +  N + " " + (N + 1)));
         }
     }
 }
