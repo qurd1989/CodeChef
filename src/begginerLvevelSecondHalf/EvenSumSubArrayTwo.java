@@ -12,7 +12,21 @@ public class EvenSumSubArrayTwo {
                 arr[i] = sc.nextInt();
                 result += arr[i];
             }
-            if (result % 2 =)
+            if (result % 2 == 0){
+                System.out.println(0);
+            } else {
+                int count = 0;
+                for (int i = 0; i < n; i++) {
+                    if (arr[i] % 2 != 0) {
+                        count++;
+                    }
+                }
+                if (count >= 2) {
+                    System.out.println(2);
+                } else {
+                    System.out.println(-1);
+                }
+            }
         }
     }
 
