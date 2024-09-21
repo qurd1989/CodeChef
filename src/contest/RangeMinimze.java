@@ -13,6 +13,8 @@ public class RangeMinimze {
             for (int i = 0; i < n; i++) {
                 A[i] = sc.nextInt();
             }
+            System.out.println("A: "+Arrays.toString(A));
+
             Arrays.sort(A);
 
 
