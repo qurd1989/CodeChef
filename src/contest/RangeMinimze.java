@@ -20,6 +20,7 @@ public class RangeMinimze {
 
             if (n <= 3) {
                 System.out.println(0);
+                System.out.println("A: "+Arrays.toString(A));
                 continue;
             }
 
