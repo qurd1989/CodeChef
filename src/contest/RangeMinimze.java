@@ -16,7 +16,7 @@ public class RangeMinimze {
             System.out.println("A: "+Arrays.toString(A));
 
             Arrays.sort(A);
-
+            System.out.println("A: "+Arrays.toString(A));
 
             if (n <= 3) {
                 System.out.println(0);
