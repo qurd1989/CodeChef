@@ -55,7 +55,7 @@ public class RangeMinimze {
         g2d.setFont(new Font("Arial", Font.BOLD, 20));
         g2d.drawString("Loading...", x + 15, y + height/2);
     }
-    private void drawArrow(Graphics g, int x, int y, int size){
+    private  void drawArrow(Graphics g, int x, int y, int size){
        int[] xPoints = {x, x+size, x + size * 2};
        int [] yPoints = {y, y - size, y};
        g.fillPolygon(xPoints, yPoints, 3);
