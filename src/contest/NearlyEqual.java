@@ -20,8 +20,6 @@ public class NearlyEqual {
         }
         sc.close();
     }
-
-    // Function to calculate Hamming distance between two strings
     public static int calculateHammingDistance(String str1, String str2) {
         int distance = 0;
         for (int i = 0; i < str1.length(); i++) {
